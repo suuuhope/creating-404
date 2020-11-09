@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>商品信息</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/upload.css"> -->
+	<style>
+	*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Microsoft Yahei;
+	box-sizing: border-box;
+	}
+	/*标题*/
+	.titleName{
+		width: 100%;
+		height: 60px;
+		background-color:orange;
+		color: white;
+		font-family: tahoma,"microsoft yahei" !important;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.titleName h3{
+		font-weight: 500;
+		font-size: 26px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1%;
+	}
+	
+	.titleName p{
+		margin-top: 2%;	
+		margin-left: 32px;
+		font-size: 14px;
+	}
+	
+	/*正文*/
+	.container{
+
+		height: auto;
+		margin:15px auto;
+		padding: 20px;
+		/*border: 1px solid #e4e0d7;*/
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		/*align-items: center;*/
+	}
+
+	.ask{
+		height: 300px;
+		justify-content: space-around;
+
+	}
+
+	.upload-form{
+		height: 580px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.container p{
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 15px;
+		/*margin: 5px auto;*/
+	}
+	.container span{
+		width: 35px;
+		height: 35px;
+		background-size: cover;
+		background-position: center;
+		color: #ccc;
+	}
+
+	.container input{
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		height: 25px;
+		width: 320px;
+		/*text-indent: 5px;*/
+	}
+
+	.pic-icon{
+		background-image: url(../img/book.png);
+	}
+
+	.name-icon{
+		background-image: url(../img/rename.png);
+	}
+
+	.author-icon{
+		background-image: url(../img/author.png);
+	}
+
+	.press-icon{
+		background-image: url(../img/press.png);
+	}
+
+.time-icon{
+	background-image: url(../img/time.png);
+}
+
+	.version-icon{
+		background-image: url(../img/version.png);
+	}
+
+	.condition-icon{
+		background-image: url(../img/condition.png);
+	}
+
+	.orign-icon{
+		background-image: url(../img/orign.png);
+	}
+
+	.price-icon{
+		background-image: url(../img/price.png);
+	}
+
+	.desc-icon{
+		background-image: url(../img/desc.png);
+	}
+
+	 p:last-child input{
+	 	height: 100px !important;
+	 }
+
+	.submit-btn{
+		margin-top: 50px;
+		margin-bottom:50px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 350px !important;
+		height: 40px !important;
+		background-color:orange;
+		color:white;
+		font-size: 17px;
+	}
+
+	#modal-dialog{
+		width: 300px;
+		height:130px;
+		background-color: #ccc;
+		position: relative;
+		top: 50%;
+		/*bottom: 40%;*/
+		left: 50%;
+		/*margin: 0 auto;*/
+		margin-top: -30px;
+		margin-left: -150px;
+		border: 1px solid #8e9c83;
+		border-radius: 5px;
+		background: white;
+		text-align: center;
+		line-height:40px;
+		padding: 25px 20px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.modal-close{
+		width: 75%;
+		height: 40px;
+		border: 1px solid #8e9c83;
+		border-radius: 5px;
+		padding: 4px;
+		margin: 10px auto 0px;
+		background-color: #4b4d52;
+	}
+	.modal-close img{
+		/*	position: absolute;
+		right: 2px;
+		top: 2px;*/
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+	}
+
+	.modal-close-icon{
+		position: absolute;
+		right: 3px;
+		top: 3px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;	
+	}
+
+
+	/*/编辑页面*/
+	#book-pic{
+		width: 200px;
+		height: 200px;
+		background-color: white;
+		position: absolute;
+		right: 180px;
+		background-size: cover;
+		background-position: center;
+		border:1px solid #ccc;
+		border-radius: 7px;
+		/*box-sizing: border-box;*/
+
+	}
+
+	</style>
+</head>
+<body>
+	
+	
+	<div class="titleName" style="margin-left: auto;margin-right: auto;">
+		<h3 style="text-align:center;">商品信息</h3>
+	</div>
+
+	<div class="container">
+		<form>
+			<div style="color: #DE7D2C;margin-left: 30%;" >基本信息</div>
+			<br>
+			
+			<p style="text-align: center;">
+				<span class="name-icon" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				书&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" name="book-name">
+			</p>
+			<p style="text-align: center;">
+				<span class="author-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：<input type="text" name="book-author">
+			</p>
+			<p style="text-align: center;">
+				<span class="orign-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				书&nbsp;本&nbsp;&nbsp;原&nbsp;价：<input type="text" name="book-orign">
+			</p>
+			<p style="text-align: center;">
+				<span class="price-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				书&nbsp;本&nbsp;&nbsp;售&nbsp;价：<input type="text" name="book-price">
+			</p>
+			<p style="text-align: center;">
+				<span class="press-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				出&nbsp;&nbsp;&nbsp;&nbsp;版&nbsp;&nbsp;&nbsp;社：<input type="text" name="book-press">
+			</p>
+			<p style="text-align: center;">
+				<span class="time-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				出&nbsp;版&nbsp;&nbsp;时&nbsp;间：<input type="month" name="book-time">
+			</p>
+			<p style="text-align: center;">
+				<span class="version-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;S&nbsp;B&nbsp;N&nbsp;&nbsp;：<input type="text" name="book-version">
+			</p>
+			<p style="text-align: center;">
+				<span class="condition-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				书&nbsp;本&nbsp;&nbsp;品&nbsp;相：<input type="text" name="book-condition">
+			</p>
+			<p style="text-align: center;">
+				<span class="desc-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				书&nbsp;本&nbsp;&nbsp;描&nbsp;述：<input type="text" name="book-desc">
+			</p>
+			<div style="color:#DE7D2C;margin-left: 30%;">添加图片</div>
+			<p style="text-align: center;">
+				<span class="pic-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				修改书图片： <input type="file" name="book-pic" id="book-file">
+			</p>
+			<div style="text-align: center">
+				<img style= "align=middle ;" src="img/loadPic.png">
+			</div>
+			<br>
+			<div style="color: #DE7D2C;margin-left: 30%;">商品描述</div>
+			<p style="text-align: center;">
+				<input type="text" name="book-desc" style="height: 100px;width: 500px;" value="喜欢的话请联系我~">
+			</p>
+			<br>
+			<div style="text-align: center;">
+				&nbsp;&nbsp;&nbsp;<input type="submit" class="submit-btn" name="book-submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
